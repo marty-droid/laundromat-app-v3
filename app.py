@@ -14,7 +14,7 @@ WEIGHTS = {
 }
 
 # Mock data to simulate scraped and cleaned results
-# Added Lat/Long for map visualization (approximated for Chicago)
+# NOTE: ALL entries MUST have 'Lat' and 'Long' keys for the engine to work.
 MOCK_SCRAPED_DATA = [
     {'Title': 'Profitable Laundromat, Owner Retiring', 'Location': '2800 N. Milwaukee Ave, Chicago, IL', 'Price': '$750,000', 'CashFlow': '$150,000', 'Description': 'High volume store with old equipment. Real estate included. Owner retiring after 35 years. Great for a new concept build-out. 3,000 sq ft.', 'Lat': 41.933, 'Long': -87.712},
     {'Title': 'Coin Laundry Business Only - Great Lease', 'Location': '3500 W. Fullerton Ave, Chicago, IL', 'Price': '$200,000', 'CashFlow': '$80,000', 'Description': 'Lease only. High traffic area near Avondale border. Equipment is 10 years old. No real estate. Absentee owner needs quick sale.', 'Lat': 41.924, 'Long': -87.724},
@@ -23,7 +23,6 @@ MOCK_SCRAPED_DATA = [
     {'Title': 'Wash & Fold Opportunity in North Suburb', 'Location': 'Evanston, IL', 'Price': '$300,000', 'CashFlow': '$60,000', 'Description': 'Small store focused on wash and fold. Not in target area. Real estate not included.', 'Lat': 42.045, 'Long': -87.687},
     {'Title': 'Prime Hermosa Corner Lot Laundromat', 'Location': '4000 W. Diversey Ave, Chicago, IL', 'Price': '$1,200,000', 'CashFlow': '$200,000', 'Description': 'Massive potential. Real estate included. Owner needs quick exit due to health. Older, inefficient machines. Perfect for new concept.', 'Lat': 41.932, 'Long': -87.730}
 ]
-
 # --- Automated Data Enrichment Functions ---
 
 def automated_geocoding(location_text, lat, long):
